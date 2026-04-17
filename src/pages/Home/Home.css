@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: flex-start;
   padding: 15px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/src/assets/hero-img-1.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/src/assets/hero-img-1.png");
   width: 90%;
   height: 111px;
   border-radius: 10px;
