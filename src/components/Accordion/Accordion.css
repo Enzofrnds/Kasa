@@ -20,7 +20,7 @@
   transition: transform 0.3s ease-out;
 }
 .accordion__header i.rotate {
-  transform: rotate(180deg);
+  transform: rotate(-180deg);
   transition: transform 0.3s ease-out;
 }
 .accordion__content {

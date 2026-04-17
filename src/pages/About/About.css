@@ -11,6 +11,7 @@
 @media (min-width: 1200px) {
   .hero-about {
     height: 223px;
+    margin-bottom: 40px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 }/*# sourceMappingURL=About.css.map */

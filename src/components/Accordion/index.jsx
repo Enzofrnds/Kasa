@@ -8,7 +8,7 @@ function Accordion({ title, content }) {
         <div className='accordion'>
             <div className='accordion__header'>
                 {title}
-                <i className="fa-solid fa-angle-up" onClick={() => setIsOpen(false)}></i>
+                <i className="fa-solid fa-angle-down" onClick={() => setIsOpen(false)}></i>
             </div>
             <div className='accordion__content'>
                 {content}
@@ -18,7 +18,7 @@ function Accordion({ title, content }) {
         <div className='accordion'>
             <div className='accordion__header'>
                 {title}
-                <i className="fa-solid fa-angle-up rotate" onClick={() => setIsOpen(true)}></i>
+                <i className="fa-solid fa-angle-down rotate" onClick={() => setIsOpen(true)}></i>
             </div>
         </div>
     );
