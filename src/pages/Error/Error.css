@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 65vh;
+  height: 100%;
   gap: 80px;
 }
 .error__title {
@@ -15,6 +15,7 @@
   font-size: 18px;
   text-align: center;
   line-height: 143%;
+  font-weight: 500;
   color: #FF6060;
   width: 300px;
 }
@@ -23,4 +24,20 @@
   line-height: 143%;
   color: #000;
   text-decoration: underline;
+}
+@media (min-width: 1200px) {
+  .error {
+    gap: 35px;
+  }
+  .error__title {
+    font-size: 288px;
+  }
+  .error__text {
+    font-size: 36px;
+    width: auto;
+    margin-bottom: 85px;
+  }
+  .error__link {
+    margin-bottom: 85px;
+  }
 }/*# sourceMappingURL=Error.css.map */

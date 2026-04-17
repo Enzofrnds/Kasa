@@ -6,7 +6,7 @@ function Home() {
     return (
         <main>
             <section className='hero'>
-                <h1 className='hero__title'>Chez vous, <br />partout et ailleurs</h1>
+                <h1 className='hero__title'>Chez vous, partout et ailleurs</h1>
             </section>
             <section className='annonces'>
                 {annonces.map((annonce) => (

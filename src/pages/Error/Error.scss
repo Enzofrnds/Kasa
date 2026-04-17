@@ -3,7 +3,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 65vh;
+  height: 100%;
+
   gap: 80px;
   &__title{
     font-size: 96px;
@@ -14,6 +15,7 @@
         font-size: 18px;
         text-align: center;
         line-height: 143%;
+        font-weight: 500;
         color: #FF6060;
         width: 300px;
     }
@@ -22,5 +24,19 @@
         line-height: 143%;
         color: #000;
         text-decoration: underline;
+    }
+    @media (min-width: 1200px) {
+        gap: 35px;
+        &__title{
+            font-size: 288px;
+        }
+        &__text{
+            font-size: 36px;
+            width: auto;
+            margin-bottom: 85px;
+        }
+        &__link{
+            margin-bottom: 85px;
+        }
     }
 }

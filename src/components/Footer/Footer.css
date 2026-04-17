@@ -16,4 +16,17 @@
   font-size: 12px;
   width: 133px;
   text-align: center;
+}
+@media (min-width: 1200px) {
+  .footer {
+    gap: 40px;
+    height: 209px;
+  }
+  .footer .footer__logo {
+    width: 122px;
+  }
+  .footer .footer__text {
+    font-size: 24px;
+    width: auto;
+  }
 }/*# sourceMappingURL=Footer.css.map */
