@@ -1,1 +1,26 @@
-/*# sourceMappingURL=Error.css.map */
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 65vh;
+  gap: 80px;
+}
+.error__title {
+  font-size: 96px;
+  line-height: 143%;
+  color: #FF6060;
+}
+.error__text {
+  font-size: 18px;
+  text-align: center;
+  line-height: 143%;
+  color: #FF6060;
+  width: 300px;
+}
+.error__link {
+  font-size: 18px;
+  line-height: 143%;
+  color: #000;
+  text-decoration: underline;
+}/*# sourceMappingURL=Error.css.map */
