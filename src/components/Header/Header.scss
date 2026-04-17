@@ -1,0 +1,35 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    &__logo{
+        width: 145px;
+    }
+    &__nav{
+        display: flex;
+        gap: 26px;
+        list-style: none;
+        &__link{
+            text-decoration: none;
+            color: #000000;
+            font-weight: 500;
+            font-size: 12px;
+            &.active{
+                text-decoration: underline;
+            }
+        }
+    }
+    @media screen and (min-width: 768px) {
+        padding: 45px 80px;
+        &__logo{
+            width: 210px;
+        }
+        &__nav{
+            gap: 57px;
+            &__link{
+                font-size: 24px;
+            }
+        }
+    }
+}
