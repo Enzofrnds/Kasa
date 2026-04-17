@@ -2,6 +2,7 @@
     width: 90%;
     margin: 0 auto;
     margin-bottom: 20px;
+
     &__header {
         display: flex;
         justify-content: space-between;
@@ -12,16 +13,18 @@
         font-weight: 700;
         font-size: 13px;
         border-radius: 5px;
+
         i {
             font-size: 20px;
             cursor: pointer;
             transition: transform 0.3s ease-out;
+
             &.rotate {
                 transform: rotate(-180deg);
-                transition: transform 0.3s ease-out;
             }
         }
     }
+
     &__content {
         display: flex;
         justify-content: center;
@@ -30,18 +33,24 @@
         padding: 20px;
         font-size: 13px;
         animation: slideDown 0.3s ease-out;
+
+        &.closing {
+            animation: slideUp 0.3s ease-out forwards;
+        }
     }
+
     @media (min-width: 1200px) {
         max-width: 1023px;
         margin: 0 auto;
         margin-bottom: 40px;
+
         &__header {
             padding: 20px;
             font-size: 18px;
-            i {
-                font-size: 24px;
-            }
+
+            i { font-size: 24px; }
         }
+
         &__content {
             padding: 30px;
             font-size: 18px;
@@ -53,11 +62,22 @@
     from {
         max-height: 0;
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(-12px);
     }
     to {
         max-height: 500px;
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-12px);
     }
 }
