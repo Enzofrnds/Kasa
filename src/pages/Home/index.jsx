@@ -10,7 +10,10 @@ function Home() {
             </section>
             <section className='annonces'>
                 {annonces.map((annonce) => (
-                    <Annonce key={annonce.id} {...annonce} />
+                    <Annonce key={annonce.id} 
+                    title={annonce.title} 
+                    cover={annonce.cover}
+                    />
                 ))}
             </section>
         </main>
