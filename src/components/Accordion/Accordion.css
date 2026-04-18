@@ -1,7 +1,6 @@
 .accordion {
   width: 90%;
   margin: 0 auto;
-  margin-bottom: 20px;
 }
 .accordion__header {
   display: flex;
@@ -13,6 +12,8 @@
   font-weight: 700;
   font-size: 13px;
   border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
 .accordion__header i {
   font-size: 20px;
@@ -27,18 +28,29 @@
   justify-content: center;
   align-items: center;
   text-align: left;
-  padding: 20px;
   font-size: 13px;
-  animation: slideDown 0.3s ease-out;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  padding: 10px;
+  margin-top: -20px;
+  background-color: #f6f6f6;
+  transition: margin-bottom 0.4s ease-out;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.accordion__content.open {
+  animation: slideDown 0.3s ease-out forwards;
+  margin-bottom: 50px;
 }
 .accordion__content.closing {
   animation: slideUp 0.3s ease-out forwards;
+  margin-bottom: 0;
 }
 @media (min-width: 1200px) {
   .accordion {
     max-width: 1023px;
     margin: 0 auto;
-    margin-bottom: 40px;
+    margin-bottom: -20px;
   }
   .accordion__header {
     padding: 20px;
@@ -50,6 +62,7 @@
   .accordion__content {
     padding: 30px;
     font-size: 18px;
+    margin-top: -20px;
   }
 }
 
@@ -57,21 +70,19 @@
   from {
     max-height: 0;
     opacity: 0;
-    transform: translateY(-12px);
   }
   to {
-    max-height: 500px;
+    max-height: 300px;
     opacity: 1;
-    transform: translateY(0);
   }
 }
 @keyframes slideUp {
   from {
+    max-height: 300px;
     opacity: 1;
-    transform: translateY(0);
   }
   to {
+    max-height: 0;
     opacity: 0;
-    transform: translateY(-12px);
   }
 }/*# sourceMappingURL=Accordion.css.map */
