@@ -42,6 +42,11 @@
   animation: slideDown 0.3s ease-out forwards;
   margin-bottom: 50px;
 }
+.accordion__content.closed {
+  max-height: 0;
+  opacity: 0;
+  margin-bottom: 0;
+}
 .accordion__content.closing {
   animation: slideUp 0.3s ease-out forwards;
   margin-bottom: 0;

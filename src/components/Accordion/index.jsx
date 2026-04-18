@@ -3,31 +3,24 @@ import './Accordion.css'
 
 function Accordion({ title, content }) {
     const [isOpen, setIsOpen] = useState(false);
-    const [isClosing, setIsClosing] = useState(false);
-
-    const handleClose = () => {
-        setIsClosing(true);
-        setTimeout(() => {
-            setIsOpen(false);
-            setIsClosing(false);
-        }, 300);
+    const [hasToggled, setHasToggled] = useState(false);
+    
+    const handleToggle = () => {
+        setHasToggled(true);
+        setIsOpen(!isOpen);
     };
-
-    return isOpen ? (
-        <div className='accordion'>
-            <div className='accordion__header'>
-                {title}
-                <i className="fa-solid fa-angle-down" onClick={handleClose}></i>
+    
+    return (
+        <div className="accordion">
+            <div 
+                className="accordion__header" 
+                onClick={handleToggle}
+            >
+                <h3>{title}</h3>
+                <i className={`fa-solid fa-angle-down ${isOpen ? 'rotate' : ''}`}></i>
             </div>
-            <div className={`accordion__content${isClosing ? ' closing' : ''}`}>
+            <div className={`accordion__content ${isOpen ? 'open' : hasToggled ? 'closing' : 'closed'}`}>
                 {content}
-            </div>
-        </div>
-    ) : (
-        <div className='accordion'>
-            <div className='accordion__header'>
-                {title}
-                <i className="fa-solid fa-angle-down rotate" onClick={() => setIsOpen(true)}></i>
             </div>
         </div>
     );
