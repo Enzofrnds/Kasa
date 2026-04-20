@@ -10,7 +10,7 @@ import { use } from 'react';
 function Logement() {
     const { id } = useParams();
     const annonce = Annonce.find((item) => item.id === id);
-    const rating = Math.max(0, Math.min(5, Number(annonce?.rating) || 0));
+    const rating = parseInt(annonce?.rating);
 
     return !annonce ? (
         <Error />
@@ -18,8 +18,11 @@ function Logement() {
         <main>
             <div className='carrousel'>
                 <img className=' arrow arrow-left' src={arrowLeft} alt="Précédent"/>
-                <img className='carrousel-img' src={annonce.cover} alt={annonce.title} />
+                <img className='carrousel-img' src={annonce.pictures[0]} alt={annonce.title} />
                 <img className='arrow arrow-right' src={arrowRight} alt="Suivant"/>
+                <p className='carrousel-index'>
+                    {annonce.pictures.findIndex((pic) => pic === annonce.pictures[0]) + 1} / {annonce.pictures.length}
+                </p>
             </div>
             <section className='info'>
                 <div className='info-left'>

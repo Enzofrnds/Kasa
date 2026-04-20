@@ -29,6 +29,15 @@
 .carrousel .arrow-right {
   right: 7%;
 }
+.carrousel .carrousel-index {
+  position: absolute;
+  bottom: 10px;
+  right: 45%;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+}
 
 .info {
   display: flex;
