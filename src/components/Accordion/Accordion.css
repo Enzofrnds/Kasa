@@ -13,7 +13,6 @@
   font-size: 13px;
   border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 20px;
 }
 .accordion__header i {
   font-size: 20px;
@@ -29,10 +28,7 @@
   align-items: center;
   text-align: left;
   font-size: 13px;
-  margin-bottom: 15px;
-  margin-top: 5px;
   padding: 10px;
-  margin-top: -20px;
   background-color: #f6f6f6;
   transition: margin-bottom 0.4s ease-out;
   border-radius: 5px;
@@ -40,7 +36,7 @@
 }
 .accordion__content.open {
   animation: slideDown 0.3s ease-out forwards;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 .accordion__content.closed {
   max-height: 0;
@@ -55,7 +51,6 @@
   .accordion {
     max-width: 1023px;
     margin: 0 auto;
-    margin-bottom: -20px;
   }
   .accordion__header {
     padding: 20px;
@@ -65,9 +60,14 @@
     font-size: 24px;
   }
   .accordion__content {
-    padding: 30px;
     font-size: 18px;
-    margin-top: -20px;
+    padding: 20px;
+  }
+  .accordion__content.closed {
+    margin-bottom: -20px;
+  }
+  .accordion__content.closing {
+    margin-bottom: -20px;
   }
 }
 
