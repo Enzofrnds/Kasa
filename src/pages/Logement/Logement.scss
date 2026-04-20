@@ -35,7 +35,7 @@
     justify-content: center;
     margin: 20px 20px;
     color: #FF6060;
-    gap: 10px;
+    gap: 15px;
 }
 
 .info-left{
@@ -94,10 +94,10 @@
         .star{
             width: 18px;
             height: 18px;
-            .active{
+            &.active{
                 color: #FF6060;
             }
-            .inactive{
+            &.inactive{
                 color: #f6f6f6;
             }
         }

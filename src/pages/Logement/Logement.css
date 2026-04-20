@@ -36,7 +36,7 @@
   justify-content: center;
   margin: 20px 20px;
   color: #FF6060;
-  gap: 10px;
+  gap: 15px;
 }
 
 .info-left {
@@ -97,6 +97,12 @@
 .info-right .rating .star {
   width: 18px;
   height: 18px;
+}
+.info-right .rating .star.active {
+  color: #FF6060;
+}
+.info-right .rating .star.inactive {
+  color: #f6f6f6;
 }
 
 .accordions {

@@ -1,7 +1,4 @@
 .annonces__item {
-  display: block;
-  text-decoration: none;
-  color: inherit;
   overflow: hidden;
   padding: 0;
   position: relative;

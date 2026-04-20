@@ -8,6 +8,7 @@ import { useParams } from 'react-router-dom';
 function Logement() {
     const { id } = useParams();
     const annonce = Annonce.find((item) => item.id === id);
+    const rating = Math.max(0, Math.min(5, Number(annonce?.rating) || 0));
 
     return (
         <main>
@@ -35,7 +36,7 @@ function Logement() {
                         {Array.from({ length: 5 }, (_, index) => (
                             <i
                                 key={index}
-                                className={`fa-solid fa-star star ${index < Number(annonce?.rating) ? 'active' : 'inactive'}`}
+                                className={`star ${index < rating ? 'fa-solid active' : 'fa-solid inactive '} fa-star`}
                                 aria-hidden='true'
                             />
                         ))}
