@@ -34,8 +34,6 @@
   bottom: 10px;
   right: 45%;
   color: white;
-  padding: 5px 10px;
-  border-radius: 10px;
   font-size: 12px;
 }
 
@@ -45,13 +43,14 @@
   justify-content: center;
   margin: 20px 20px;
   color: #FF6060;
-  gap: 15px;
+  gap: 20px;
 }
 
 .info-left {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  padding: 0 5%;
 }
 .info-left .info-title {
   font-size: 18px;
@@ -81,6 +80,7 @@
   gap: 20px;
   justify-content: space-between;
   align-items: center;
+  padding: 0 5%;
 }
 .info-right .host {
   display: flex;
