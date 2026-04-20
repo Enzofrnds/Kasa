@@ -1,11 +1,12 @@
 import './Annonce.css'
+import { Link } from 'react-router-dom';
 
-function Annonce(annonces) {
+function Annonce({ id, title, cover }) {
     return (
-        <div className="annonces__item">
-            <img className='annonces__item__img' src={annonces.cover} alt={annonces.title} />
-            <h2 className="annonces__item__title">{annonces.title}</h2>
-        </div>
+        <Link to={`/Logement/${id}`} className="annonces__item">
+            <img className='annonces__item__img' src={cover} alt={title} />
+            <h2 className="annonces__item__title">{title}</h2>
+        </Link>
     );
 }
 

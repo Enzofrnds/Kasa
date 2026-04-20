@@ -2,47 +2,48 @@ import './Logement.css';
 import Annonce from '../../datas/annonces.json';
 import arrowLeft from '../../assets/arrow-left.png';
 import arrowRight from '../../assets/arrow-right.png';
-import starActive from '../../assets/star-active.png';
-import starInactive from '../../assets/star-inactive.png';
 import Accordion from '../../components/Accordion';
+import { useParams } from 'react-router-dom';
 
 function Logement() {
+    const { id } = useParams();
+    const annonce = Annonce.find((item) => item.id === id);
+
     return (
         <main>
             <div className='carrousel'>
                 <img className=' arrow arrow-left' src={arrowLeft} alt="Précédent"/>
-                <img className='carrousel-img' src={Annonce[0].cover} alt={Annonce[0].title} />
+                <img className='carrousel-img' src={annonce?.cover} alt={annonce?.title} />
                 <img className='arrow arrow-right' src={arrowRight} alt="Suivant"/>
             </div>
             <section className='info'>
                 <div className='info-left'>
-                    <h1 className='info-title'>{Annonce[0].title}</h1>
-                    <p className='info-location'>{Annonce[0].location}</p>
+                    <h1 className='info-title'>{annonce?.title}</h1>
+                    <p className='info-location'>{annonce?.location}</p>
                     <div className='tags'>
-                        {Annonce[0].tags.map((tag, index) => (
+                        {annonce?.tags.map((tag, index) => (
                             <span key={index} className='tag'>{tag}</span>
                         ))}
                     </div>
                 </div>
                 <div className='info-right'>
                     <div className='host'>
-                        <p className='host-name'>{Annonce[0].host.name}</p>
-                        <img className='host-picture' src={Annonce[0].host.picture} alt={Annonce[0].host.name} />
+                        <p className='host-name'>{annonce?.host.name}</p>
+                        <img className='host-picture' src={annonce?.host.picture} alt={annonce?.host.name} />
                     </div>
                     <div className='rating'>
                         {Array.from({ length: 5 }, (_, index) => (
-                            <img
+                            <i
                                 key={index}
-                                className='star'
-                                src={index < Annonce[0].rating ? starActive : starInactive}
-                                alt={index < Annonce[0].rating ? 'Étoile active' : 'Étoile inactive'}
+                                className={`fa-solid fa-star star ${index < Number(annonce?.rating) ? 'active' : 'inactive'}`}
+                                aria-hidden='true'
                             />
                         ))}
                     </div>
                 </div>
                 <div className='accordions'>
-                        <Accordion title="Description" content={Annonce[0].description} />
-                        <Accordion title="Équipements" content={Annonce[0].equipments.map((equipment, index) => (
+                        <Accordion title="Description" content={annonce?.description} />
+                        <Accordion title="Équipements" content={annonce?.equipments.map((equipment, index) => (
                             <span key={index}>{equipment}</span>
                         ))} />
                     </div>
