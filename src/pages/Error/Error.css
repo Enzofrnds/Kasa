@@ -24,6 +24,7 @@
   line-height: 143%;
   color: #000;
   text-decoration: underline;
+  margin-bottom: 20px;
 }
 @media (min-width: 1200px) {
   .error {
