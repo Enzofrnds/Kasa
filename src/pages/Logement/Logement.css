@@ -1,0 +1,107 @@
+.carrousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.carrousel .carrousel-img {
+  width: 90%;
+  height: 255px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.carrousel .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 50px;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+.carrousel .arrow-left {
+  left: 7%;
+}
+.carrousel .arrow-right {
+  right: 7%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px 20px;
+  color: #FF6060;
+  gap: 10px;
+}
+
+.info-left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.info-left .info-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+.info-left .info-location {
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+}
+.info-left .tags {
+  display: flex;
+  gap: 10px;
+}
+.info-left .tags .tag {
+  background-color: #FF6060;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.info-right {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+.info-right .host {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.info-right .host .host-name {
+  font-size: 12px;
+  font-weight: 500;
+}
+.info-right .host .host-picture {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.info-right .rating {
+  display: flex;
+  gap: 6px;
+}
+.info-right .rating .star {
+  width: 18px;
+  height: 18px;
+}
+
+.accordions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}/*# sourceMappingURL=Logement.css.map */
