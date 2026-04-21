@@ -5,23 +5,43 @@ import arrowRight from '../../assets/arrow-right.png';
 import Accordion from '../../components/Accordion';
 import Error from '../Error';
 import { useNavigate , useParams } from 'react-router-dom';
-import { use } from 'react';
+import { useState } from 'react';
 
 function Logement() {
     const { id } = useParams();
     const annonce = Annonce.find((item) => item.id === id);
     const rating = parseInt(annonce?.rating);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [direction, setDirection] = useState("");
 
     return !annonce ? (
         <Error />
     ) : (
         <main>
             <div className='carrousel'>
-                <img className=' arrow arrow-left' src={arrowLeft} alt="Précédent"/>
-                <img className='carrousel-img' src={annonce.pictures[0]} alt={annonce.title} />
-                <img className='arrow arrow-right' src={arrowRight} alt="Suivant"/>
+                <img 
+                    className=' arrow arrow-left' 
+                    src={arrowLeft} alt="Précédent"
+                    onClick={() => {
+                        setCurrentIndex((prevIndex) => (prevIndex === 0 ? annonce.pictures.length - 1 : prevIndex - 1));
+                        setDirection("left");
+                    }}
+                />
+                <img 
+                    key={currentIndex}
+                    className={`carrousel-img ${direction}`} 
+                    src={annonce.pictures[currentIndex]} 
+                    alt={annonce.title} />
+                <img 
+                    className='arrow arrow-right' 
+                    src={arrowRight} alt="Suivant"
+                    onClick={() => {
+                        setCurrentIndex((prevIndex) => (prevIndex === annonce.pictures.length - 1 ? 0 : prevIndex + 1));
+                        setDirection("right");
+                    }}
+                />
                 <p className='carrousel-index'>
-                    {annonce.pictures.findIndex((pic) => pic === annonce.pictures[0]) + 1} / {annonce.pictures.length}
+                    {currentIndex + 1} / {annonce.pictures.length}
                 </p>
             </div>
             <section className='info'>

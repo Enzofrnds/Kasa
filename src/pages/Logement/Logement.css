@@ -1,3 +1,23 @@
+@keyframes slideRight {
+  from {
+    transform: translateX(60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideLeft {
+  from {
+    transform: translateX(-60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 .carrousel {
   display: flex;
   align-items: center;
@@ -12,6 +32,12 @@
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
+}
+.carrousel .carrousel-img.right {
+  animation: slideRight 0.5s ease-out;
+}
+.carrousel .carrousel-img.left {
+  animation: slideLeft 0.5s ease-out;
 }
 @media (min-width: 1200px) {
   .carrousel .carrousel-img {
