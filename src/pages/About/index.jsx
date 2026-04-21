@@ -7,7 +7,7 @@ function About() {
         <main>
             <section className='hero-about'>
             </section>
-            <section className='info'>
+            <section className='info-about'>
                 {about.map((item) => (
                     <Accordion key={item.id} title={item.title} content={item.content} />
                 ))}

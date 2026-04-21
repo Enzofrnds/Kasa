@@ -16,8 +16,15 @@
   }
 }
 
+.info-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
 @media (min-width: 1200px) {
-  .info {
+  .info-about {
     margin-bottom: 20px;
   }
 }/*# sourceMappingURL=About.css.map */

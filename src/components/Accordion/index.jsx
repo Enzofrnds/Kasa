@@ -18,7 +18,7 @@ function Accordion({ title, content }) {
                 
             >
                 <h3>{title}</h3>
-                <i className={`fa-solid fa-angle-down ${isOpen ? 'rotate' : ''}`}></i>
+                <i className={`fa-solid fa-angle-up ${isOpen ? 'rotate' : ''}`}></i>
             </div>
             <div className={`accordion__content ${isOpen ? 'open' : hasToggled ? 'closing' : 'closed'}`}>
                 {content}

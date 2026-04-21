@@ -2,6 +2,8 @@
   overflow: hidden;
   padding: 0;
   position: relative;
+  display: block;
+  aspect-ratio: 335/255;
 }
 .annonces__item .annonces__item__img {
   width: 100%;

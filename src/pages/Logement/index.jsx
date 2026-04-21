@@ -48,13 +48,13 @@ function Logement() {
                         ))}
                     </div>
                 </div>
-                <div className='accordions'>
-                        <Accordion title="Description" content={annonce.description} />
-                        <Accordion title="Équipements" content={annonce.equipments.map((equipment, index) => (
-                            <p key={index}>{equipment}</p>
-                        ))} />
-                    </div>
             </section>
+            <div className='accordions'>
+                <Accordion title="Description" content={annonce.description} />
+                <Accordion title="Équipements" content={annonce.equipments.map((equipment, index) => (
+                    <p key={index}>{equipment}</p>
+                ))} />
+            </div>
         </main>
 
         

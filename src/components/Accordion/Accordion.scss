@@ -18,7 +18,13 @@
             transition: transform 0.3s ease-out;
 
             &.rotate {
-                transform: rotate(-180deg);
+                transform: rotate(180deg);
+            }
+        }
+        @media (min-width: 1200px) {
+            .header {
+                padding: 5px;
+                font-size: 18px;
             }
         }
     }
@@ -54,7 +60,7 @@
         margin: 0 auto;
 
         &__header {
-            padding: 20px;
+            padding: 14px;
             font-size: 18px;
             i{
                 font-size: 24px; 
@@ -62,7 +68,7 @@
         }
         &__content {
             font-size: 18px;
-            padding: 20px;
+            padding: 14px;
             &.closed {
                 margin-bottom: -30px;
             }

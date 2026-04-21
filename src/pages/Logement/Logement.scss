@@ -10,6 +10,9 @@
         height: 255px;
         object-fit: cover;
         border-radius: 10px;
+        @media (min-width: 1200px) {
+            height: 415px;
+        }
     }
     .arrow{
         position: absolute;
@@ -20,6 +23,9 @@
         padding: 10px;
         cursor: pointer;
         z-index: 1;
+        @media (min-width: 1200px) {
+            height: 70px;
+        }
     }
     .arrow-left{
         left: 7%;
@@ -33,6 +39,9 @@
         right: 45%;
         color: white;
         font-size: 12px;
+        @media (min-width: 1200px) {
+            font-size: 18px;
+        }
     }
 }
 
@@ -43,6 +52,11 @@
     margin: 20px 20px;
     color: #FF6060;
     gap: 20px;
+    @media (min-width: 1200px) {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 40px 20px;
+    }
 }
 
 .info-left{
@@ -69,6 +83,17 @@
             border-radius: 10px;
             font-size: 10px;
             font-weight: bold;
+        }
+    }
+    @media (min-width: 1200px) {
+        .info-title{
+            font-size: 36px;
+        }
+        .info-location{
+            font-size: 18px;
+        }
+        .tag{
+            font-size: 14px;
         }
     }
 }
@@ -101,13 +126,29 @@
         gap: 6px;
 
         .star{
-            width: 18px;
-            height: 18px;
+            font-size: 18px;
             &.active{
                 color: #FF6060;
             }
             &.inactive{
                 color: #f6f6f6;
+            }
+        }
+    }
+    @media (min-width: 1200px) {
+        flex-direction: column;
+        .host{
+            .host-name{
+                font-size: 18px;
+            }
+            .host-picture{
+                width: 64px;
+                height: 64px;
+            }
+        }
+        .rating{
+            .star{
+                font-size: 24px;
             }
         }
     }
@@ -117,6 +158,12 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 0;
     gap: 20px;
+    margin-bottom: 20px;
+    @media (min-width: 1200px) {
+        margin: 0 auto;
+        width: 90%;
+        flex-direction: row;
+        margin-bottom: 20px;
+    }
 }
