@@ -11,7 +11,7 @@ import Logement from './pages/Logement';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Router>
+    <Router basename="/Kasa">
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />

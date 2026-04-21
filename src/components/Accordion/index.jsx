@@ -15,6 +15,7 @@ function Accordion({ title, content }) {
             <div 
                 className="accordion__header" 
                 onClick={handleToggle}
+                
             >
                 <h3>{title}</h3>
                 <i className={`fa-solid fa-angle-down ${isOpen ? 'rotate' : ''}`}></i>
