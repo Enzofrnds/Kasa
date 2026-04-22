@@ -30,7 +30,7 @@ function Logement() {
                 <img 
                     key={currentIndex}
                     className={`carrousel-img ${direction}`} 
-                    src={annonce.pictures[currentIndex]} 
+                    src={annonce.pictures[currentIndex]}
                     alt={annonce.title} />
                 <img 
                     className='arrow arrow-right' 
