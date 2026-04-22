@@ -17,7 +17,7 @@
 .accordion__header i {
   font-size: 20px;
   cursor: pointer;
-  transition: transform 0.3s ease-out;
+  transition: transform 0.4s ease-out;
 }
 .accordion__header i.rotate {
   transform: rotate(180deg);
@@ -44,7 +44,7 @@
   transition: all 0.5s ease-out;
 }
 .accordion__content.open {
-  transition: all 0.5s ease-out;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
   opacity: 1;
   margin-bottom: 20px;
   max-height: 300px;
