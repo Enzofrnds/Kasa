@@ -3,7 +3,10 @@
   padding: 0;
   position: relative;
   display: block;
+  margin: 0 auto;
   aspect-ratio: 335/255;
+  max-height: 255px;
+  width: 100%;
 }
 .annonces__item .annonces__item__img {
   width: 100%;
@@ -31,7 +34,8 @@
 }
 @media (min-width: 1200px) {
   .annonces__item {
+    max-height: none;
     aspect-ratio: 1/1;
-    max-width: 340px;
+    max-width: none;
   }
-}/*# sourceMappingURL=Annonce.css.map */
+}
