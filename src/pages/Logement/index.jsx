@@ -19,30 +19,36 @@ function Logement() {
     ) : (
         <main>
             <div className='carrousel'>
-                <img 
-                    className=' arrow arrow-left' 
-                    src={arrowLeft} alt="Précédent"
-                    onClick={() => {
-                        setCurrentIndex((prevIndex) => (prevIndex === 0 ? annonce.pictures.length - 1 : prevIndex - 1));
-                        setDirection("left");
-                    }}
-                />
+                {annonce.pictures.length > 1 && (
+                    <img 
+                        className=' arrow arrow-left' 
+                        src={arrowLeft} alt="Précédent"
+                        onClick={() => {
+                            setCurrentIndex((prevIndex) => (prevIndex === 0 ? annonce.pictures.length - 1 : prevIndex - 1));
+                            setDirection("left");
+                        }}
+                    />
+                )}
                 <img 
                     key={currentIndex}
                     className={`carrousel-img ${direction}`} 
                     src={annonce.pictures[currentIndex]}
                     alt={annonce.title} />
-                <img 
-                    className='arrow arrow-right' 
-                    src={arrowRight} alt="Suivant"
-                    onClick={() => {
-                        setCurrentIndex((prevIndex) => (prevIndex === annonce.pictures.length - 1 ? 0 : prevIndex + 1));
-                        setDirection("right");
-                    }}
-                />
-                <p className='carrousel-index'>
-                    {currentIndex + 1} / {annonce.pictures.length}
-                </p>
+                {annonce.pictures.length > 1 && (
+                    <img 
+                        className='arrow arrow-right' 
+                        src={arrowRight} alt="Suivant"
+                        onClick={() => {
+                            setCurrentIndex((prevIndex) => (prevIndex === annonce.pictures.length - 1 ? 0 : prevIndex + 1));
+                            setDirection("right");
+                        }}
+                    />
+                )}
+                {annonce.pictures.length > 1 && (
+                    <p className='carrousel-index'>
+                        {currentIndex + 1} / {annonce.pictures.length}
+                    </p>
+                )}
             </div>
             <section className='info'>
                 <div className='info-left'>
